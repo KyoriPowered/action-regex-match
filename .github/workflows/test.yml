@@ -2,20 +2,49 @@ name: Test
 
 on: push
 
+env:
+  NODE_VERSION: "16.x"
+
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v3
+      - name: Setup Node.js ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v3
         with:
-          node-version: "16.x"
-
-      - run: yarn install
-
+          node-version: ${{ env.NODE_VERSION }}
+          cache: yarn
+      - run: yarn install --immutable
       - run: yarn test
-
       - run: yarn format-check
-
       - run: yarn lint
+
+  functional-test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: "Run regex match"
+      uses: ./
+      id: test-run
+      with:
+        text: "release/2.x"
+        regex: 'release/([\d.x]+)'
+    - name: "Validate output"
+      env:
+        MATCH: ${{ steps.test-run.outputs.match }}
+        GROUP_1: ${{ steps.test-run.outputs.group1 }}
+      run: |
+        FAILED=0
+        if [[ "$MATCH" != "release/2.x" ]]; then
+          echo "::error title=Functional test failure::Wrong value for match, got '$MATCH' but expected 'release/2.x'"
+          FAILED=1
+        fi
+        if [[ "$GROUP_1" != "2.x" ]]; then
+          echo "::error title=Functional test failure::Wrong value for group 1, got '$GROUP_1' but expected '2.x'"
+          FAILED=1
+        fi
+
+        if [[ "$FAILED" -eq 1 ]]; then
+          exit 1
+        fi

@@ -1,6 +1,6 @@
-name: Actions Ecosystem Action Regex Match
+name: Regex Match Action
 description: Match a input text with a input regex.
-author: Actions Ecosystem
+author: SpongePowered
 inputs:
   text:
     description: A text as the target for inputs.regex.

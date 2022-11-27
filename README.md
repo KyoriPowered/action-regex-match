@@ -45,9 +45,9 @@ jobs:
   create_comment:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
-      - uses: actions-ecosystem/action-regex-match@v2
+      - uses: KyoriPowered/action-regex-match@v3
         id: regex-match
         with:
           text: ${{ github.event.comment.body }}
@@ -69,9 +69,9 @@ jobs:
   create_comment:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
-      - uses: actions-ecosystem/action-regex-match@v2
+      - uses: KyoriPowered/action-regex-match@v3
         id: regex-match
         with:
           text: ${{ github.event.comment.body }}
@@ -94,19 +94,39 @@ jobs:
             ---
 ```
 
+## Contributing
+
+As this is a Javascript action, it is subject to the quirks enforced on GitHub. Development should be done on Node 16 or later. Any text editor works, but we tend to use VS Code.
+
+To set up a development environment:
+
+1. Clone this repository
+2. Install Node v16 or later
+3. (if the `yarn` command is not available), run `corepack enable`
+4. Fetch dependencies by running `yarn install`
+5. Open the project in VS Code: `code .` (or your choice of editor). The source to edit is in `src/`
+
+After making changes, run `yarn build` to compile the TS source, producing the final `dist/index.js` file that Actions actually reads. Yes, for some reason GitHub makes us commit this file to the repository. A CI check will ensure that this step has been done when pull requests are published.
+
+### Making a release
+
+Simply create a release based on a tag with the format vMAJOR.MINOR.PATCH (all 3 elements are required). An Actions workflow will automatically run to update the alias tags of vMAJOR and vMAJOR.MINOR.
+
+
 ## License
 
+Copyright 2022 KyoriPowered <https://kyori.net>
 Copyright 2020 The Actions Ecosystem Authors.
 
 Action Regex Match is released under the [Apache License 2.0](./LICENSE).
 
 <!-- badge links -->
 
-[actions-workflow-test]: https://github.com/actions-ecosystem/action-regex-match/actions?query=workflow%3ATest
-[actions-workflow-test-badge]: https://img.shields.io/github/workflow/status/actions-ecosystem/action-regex-match/Test?label=Test&style=for-the-badge&logo=github
+[actions-workflow-test]: https://github.com/KyoriPowered/action-regex-match/actions?query=workflow%3ATest
+[actions-workflow-test-badge]: https://img.shields.io/github/workflow/status/KyoriPowered/action-regex-match/Test?label=Test&style=for-the-badge&logo=github
 
-[release]: https://github.com/actions-ecosystem/action-regex-match/releases
-[release-badge]: https://img.shields.io/github/v/release/actions-ecosystem/action-regex-match?style=for-the-badge&logo=github
+[release]: https://github.com/KyoriPowered/action-regex-match/releases
+[release-badge]: https://img.shields.io/github/v/release/KyoriPowered/action-regex-match?style=for-the-badge&logo=github
 
 [license]: LICENSE
-[license-badge]: https://img.shields.io/github/license/actions-ecosystem/action-add-labels?style=for-the-badge
+[license-badge]: https://img.shields.io/github/license/KyoriPowered/action-regex-match?style=for-the-badge

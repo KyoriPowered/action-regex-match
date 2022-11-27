@@ -1,3 +1,14 @@
 node_modules/
-lib/
 __tests__/runner/*
+
+# Yarn junk
+
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+/.yarn/releases/** binary
+/.yarn/plugins/** binary

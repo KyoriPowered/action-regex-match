@@ -1,0 +1,34 @@
+name: Fill in release tags
+
+
+# When a release tag is pushed (i.e v2.3.0), we can update shortened tags
+on:
+  release:
+    types:
+      - released
+
+jobs:
+  check-dist:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: create tag parts
+        id: match
+        uses: ./
+        with:
+          text: ${{ github.event.release.tag_name }}
+          regex: 'v((\d+)\.(\d+)\.(\d+))'
+      - name: create and push tags
+        env:
+          RELEASE: ${{ steps.match.outputs.group1 }}
+          MAJOR: ${{ steps.match.outputs.group2 }}
+          MINOR: ${{ steps.match.outputs.group3 }}
+          PATCH: ${{ steps.match.outputs.group4 }}
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+
+          git tag -f v$MAJOR.$MINOR -m "Release $RELEASE"
+          git tag -f v$MAJOR -m "Release $RELEASE"
+          git push -f --tags origin
