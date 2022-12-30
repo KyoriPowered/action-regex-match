@@ -123,10 +123,10 @@ Action Regex Match is released under the [Apache License 2.0](./LICENSE).
 <!-- badge links -->
 
 [actions-workflow-test]: https://github.com/KyoriPowered/action-regex-match/actions?query=workflow%3ATest
-[actions-workflow-test-badge]: https://img.shields.io/github/workflow/status/KyoriPowered/action-regex-match/Test?label=Test&style=for-the-badge&logo=github
+[actions-workflow-test-badge]: https://img.shields.io/github/actions/workflow/status/KyoriPowered/action-regex-match/test.yml?label=Test&branch=trunk&style=flat-square&logo=github
 
 [release]: https://github.com/KyoriPowered/action-regex-match/releases
-[release-badge]: https://img.shields.io/github/v/release/KyoriPowered/action-regex-match?style=for-the-badge&logo=github
+[release-badge]: https://img.shields.io/github/v/release/KyoriPowered/action-regex-match?style=flat-square&logo=github
 
 [license]: LICENSE
-[license-badge]: https://img.shields.io/github/license/KyoriPowered/action-regex-match?style=for-the-badge
+[license-badge]: https://img.shields.io/github/license/KyoriPowered/action-regex-match?style=flat-square
