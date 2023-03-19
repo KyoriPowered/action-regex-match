@@ -1303,13 +1303,13 @@ __metadata:
   linkType: hard
 
 "@vercel/ncc@npm:^0.36.0":
-  version: 0.36.0
-  resolution: "@vercel/ncc@npm:0.36.0"
+  version: 0.36.1
+  resolution: "@vercel/ncc@npm:0.36.1"
   dependencies:
     node-gyp: latest
   bin:
     ncc: dist/ncc/cli.js
-  checksum: c796b2e435e6b6268ba795e61ec236d784f00f7d888637a372f353aa2b1ae7abf26fead42ba8172cee680eda6b42901883644cd7f43fa9c163d01c29f8678014
+  checksum: dcb8db089b07a8fad64c24eef25be6bc2db7ba30582a03236e3a6d332c8653d93a45aba7fe0e01b6d64f3c5b54d23467539ac3664c113f54a9e59341ded79bf9
   languageName: node
   linkType: hard
 
@@ -3461,6 +3461,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"json5@npm:^2.2.3":
+  version: 2.2.3
+  resolution: "json5@npm:2.2.3"
+  bin:
+    json5: lib/cli.js
+  checksum: 2a7436a93393830bce797d4626275152e37e877b265e94ca69c99e3d20c2b9dab021279146a39cdb700e71b2dd32a4cebd1514cd57cee102b1af906ce5040349
+  languageName: node
+  linkType: hard
+
 "kleur@npm:^3.0.3":
   version: 3.0.3
   resolution: "kleur@npm:3.0.3"
@@ -4026,11 +4035,11 @@ __metadata:
   linkType: hard
 
 "prettier@npm:^2.8.0":
-  version: 2.8.0
-  resolution: "prettier@npm:2.8.0"
+  version: 2.8.4
+  resolution: "prettier@npm:2.8.4"
   bin:
     prettier: bin-prettier.js
-  checksum: 72004ce0cc9bb097daf3e3833f62495768724392c1d5b178dd47372337616e9e50ecbb0804f236596223f7b5eb1bbe69cefc8957dca21112c5777e77ef73a564
+  checksum: c173064bf3df57b6d93d19aa98753b9b9dd7657212e33b41ada8e2e9f9884066bb9ca0b4005b89b3ab137efffdf8fbe0b462785aba20364798ff4303aadda57e
   languageName: node
   linkType: hard
 
@@ -4535,13 +4544,13 @@ __metadata:
   linkType: hard
 
 "ts-jest@npm:^29.0.3":
-  version: 29.0.3
-  resolution: "ts-jest@npm:29.0.3"
+  version: 29.0.5
+  resolution: "ts-jest@npm:29.0.5"
   dependencies:
     bs-logger: 0.x
     fast-json-stable-stringify: 2.x
     jest-util: ^29.0.0
-    json5: ^2.2.1
+    json5: ^2.2.3
     lodash.memoize: 4.x
     make-error: 1.x
     semver: 7.x
@@ -4563,7 +4572,7 @@ __metadata:
       optional: true
   bin:
     ts-jest: cli.js
-  checksum: 541e51776d367fa2279af47f75af94b03e0538f1839ea9983de0f4ad7f188002f6eb1fc72440651d96daa62d25a7bc679a129c14e6ef291277eea9346751d56b
+  checksum: f60f129c2287f4c963d9ee2677132496c5c5a5d39c27ad234199a1140c26318a7d5bda34890ab0e30636ec42a8de28f84487c09e9dcec639c9c67812b3a38373
   languageName: node
   linkType: hard
 
