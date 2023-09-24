@@ -96,7 +96,7 @@ jobs:
 
 ## Contributing
 
-As this is a Javascript action, it is subject to the quirks enforced on GitHub. Development should be done on Node 16 or later. Any text editor works, but we tend to use VS Code.
+As this is a Javascript action, it is subject to the quirks enforced on GitHub. Development should be done on Node 20 or later. Any text editor works, but we tend to use VS Code.
 
 To set up a development environment:
 
