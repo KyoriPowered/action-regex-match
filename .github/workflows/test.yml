@@ -9,7 +9,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Setup Node.js ${{ env.NODE_VERSION }}
         uses: actions/setup-node@v3
         with:
@@ -23,7 +23,7 @@ jobs:
   functional-test:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: "Run regex match"
       uses: ./
       id: test-run
