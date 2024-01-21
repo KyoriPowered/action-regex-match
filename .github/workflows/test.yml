@@ -2,28 +2,15 @@ name: Test
 
 on: push
 
-env:
-  NODE_VERSION: "20.x"
-
 jobs:
   test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Setup Node.js ${{ env.NODE_VERSION }}
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-          cache: yarn
-      - run: yarn install --immutable
-      - run: yarn test
-      - run: yarn format-check
-      - run: yarn lint
+    uses: "KyoriPowered/.github/.github/workflows/shared-action-test.yaml@trunk"
+    secrets: "inherit"
 
   functional-test:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+    - uses: "actions/checkout@v4.1.1"
     - name: "Run regex match"
       uses: ./
       id: test-run
