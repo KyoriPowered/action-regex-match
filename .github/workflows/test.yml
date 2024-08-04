@@ -10,7 +10,7 @@ jobs:
   functional-test:
     runs-on: ubuntu-latest
     steps:
-    - uses: "actions/checkout@v4.1.1"
+    - uses: "actions/checkout@v4.1.7"
     - name: "Run regex match"
       uses: ./
       id: test-run
