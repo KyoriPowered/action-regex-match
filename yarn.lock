@@ -577,7 +577,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint/js@npm:9.34.0":
+"@eslint/js@npm:9.34.0, @eslint/js@npm:^9.34.0":
   version: 9.34.0
   resolution: "@eslint/js@npm:9.34.0"
   checksum: 10c0/53f1bfd2a374683d9382a6850354555f6e89a88416c34a5d34e9fbbaf717e97c2b06300e8f93e5eddba8bda8951ccab7f93a680e56ded1a3d21d526019e69bab
@@ -1230,7 +1230,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/eslint-plugin@npm:^8.0.0":
+"@typescript-eslint/eslint-plugin@npm:8.41.0":
   version: 8.41.0
   resolution: "@typescript-eslint/eslint-plugin@npm:8.41.0"
   dependencies:
@@ -1251,7 +1251,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:^8.0.0":
+"@typescript-eslint/parser@npm:8.41.0":
   version: 8.41.0
   resolution: "@typescript-eslint/parser@npm:8.41.0"
   dependencies:
@@ -1408,10 +1408,9 @@ __metadata:
   resolution: "action-regex-match@workspace:."
   dependencies:
     "@actions/core": "npm:^1.10.1"
+    "@eslint/js": "npm:^9.34.0"
     "@types/jest": "npm:^29.5.5"
     "@types/node": "npm:^20.6.4"
-    "@typescript-eslint/eslint-plugin": "npm:^8.0.0"
-    "@typescript-eslint/parser": "npm:^8.0.0"
     "@vercel/ncc": "npm:^0.38.0"
     eslint: "npm:^9.0.0"
     eslint-plugin-jest: "npm:^28.0.0"
@@ -1420,6 +1419,7 @@ __metadata:
     prettier: "npm:^3.0.3"
     ts-jest: "npm:^29.1.1"
     typescript: "npm:^5.2.2"
+    typescript-eslint: "npm:^8.41.0"
   languageName: unknown
   linkType: soft
 
@@ -4782,6 +4782,21 @@ __metadata:
   version: 0.11.0
   resolution: "type-fest@npm:0.11.0"
   checksum: 10c0/d548325b34e6110ce28acb6404f797758404354b7edc7b767203741781d92739ee9f6188ca0ebc9d988a5d3f51d47c5295b0d777939913b74bb0eda8e62893f9
+  languageName: node
+  linkType: hard
+
+"typescript-eslint@npm:^8.41.0":
+  version: 8.41.0
+  resolution: "typescript-eslint@npm:8.41.0"
+  dependencies:
+    "@typescript-eslint/eslint-plugin": "npm:8.41.0"
+    "@typescript-eslint/parser": "npm:8.41.0"
+    "@typescript-eslint/typescript-estree": "npm:8.41.0"
+    "@typescript-eslint/utils": "npm:8.41.0"
+  peerDependencies:
+    eslint: ^8.57.0 || ^9.0.0
+    typescript: ">=4.8.4 <6.0.0"
+  checksum: 10c0/e141ffaf0332053483526a31e68755fe1438f6367571f39e67e32c0e15d509e8678adab2020597720b0307360493724d8dcf60d0620611d7e1e209d7f952cfe9
   languageName: node
   linkType: hard
 
