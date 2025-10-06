@@ -27,7 +27,7 @@
   "devDependencies": {
     "@eslint/js": "^9.34.0",
     "@types/jest": "^30.0.0",
-    "@types/node": "^20.6.4",
+    "@types/node": "^22.0.0",
     "@vercel/ncc": "^0.38.0",
     "eslint": "^9.0.0",
     "eslint-plugin-jest": "^29.0.0",

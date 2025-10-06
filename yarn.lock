@@ -1502,12 +1502,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^20.6.4":
-  version: 20.19.19
-  resolution: "@types/node@npm:20.19.19"
+"@types/node@npm:^22.0.0":
+  version: 22.18.8
+  resolution: "@types/node@npm:22.18.8"
   dependencies:
     undici-types: "npm:~6.21.0"
-  checksum: 10c0/488589d6d1d562ad4e8ed9bb36703a8f3bb7feed206bba867358eda0965e781a408f14ed7ff1ca334ae6f6823dcfe2eb2536ffe48e2ab02d47b4c3c5395d274a
+  checksum: 10c0/54473730e7417b923fec427f62ed3204259acbd8e450a7593bad8ae02a75effcfcc864b34bf02c108eeb9c04a404791687f42b801bafa5264a8761f4df9122fd
   languageName: node
   linkType: hard
 
@@ -1856,7 +1856,7 @@ __metadata:
     "@actions/core": "npm:^1.10.1"
     "@eslint/js": "npm:^9.34.0"
     "@types/jest": "npm:^30.0.0"
-    "@types/node": "npm:^20.6.4"
+    "@types/node": "npm:^22.0.0"
     "@vercel/ncc": "npm:^0.38.0"
     eslint: "npm:^9.0.0"
     eslint-plugin-jest: "npm:^29.0.0"
